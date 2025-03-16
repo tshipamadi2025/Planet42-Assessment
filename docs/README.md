@@ -45,8 +45,8 @@ Ensure you have the following installed:
 
 1. Clone the repo:
    ```bash
-   git clone <repo_url>
-   cd <repo_directory>
+   git clone https://github.com/tshipamadi2025/Planet42-Assessment.git
+   cd Planet42-Assessment
    ```
 
 2. Build and start services:
@@ -86,10 +86,6 @@ SELECT customer_id, SUM(transaction_amount) AS total_spent FROM transactions GRO
 ```sql
 SELECT DATE_FORMAT(transaction_date, '%Y-%m') AS month, SUM(transaction_amount) AS total_spent FROM transactions WHERE transaction_date >= DATE_SUB(CURDATE(), INTERVAL 12 MONTH) GROUP BY month ORDER BY month;
 ```
-
-
-## 📜 License
-Distributed under the MIT License. See `LICENSE.txt` for details.
 
 ## 🙌 Acknowledgments
 - Based on [othneildrew's Best README Template](https://github.com/othneildrew/Best-README-Template).
