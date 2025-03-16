@@ -1,6 +1,6 @@
 # ETL Pipeline  planet42 Assessment
 
-## 🚀 About the Project
+## About the Project
 
 This project implements an **ETL pipeline** that:
 - **Extracts** transaction data from an API.
@@ -9,14 +9,14 @@ This project implements an **ETL pipeline** that:
 - Uses **Apache Airflow** for orchestration.
 - Runs inside **Docker** using `docker-compose`.
 
-## 🛠 Built With
+## Built With
 
 - **Python**
 - **Apache Airflow**
 - **MySQL**
 - **Docker & Docker Compose**
 
-## 📦 Folder Structure
+## Folder Structure
 
 ```
 project_root/
@@ -34,7 +34,7 @@ project_root/
 │   ├── analytics_queries.sql  # SQL queries for insights
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Ensure you have the following installed:
@@ -58,7 +58,7 @@ Ensure you have the following installed:
    - **Airflow UI:** http://localhost:8080 (User: `airflow`, Password: `airflow`)
    - **MySQL:** `localhost:3306`, User: `root`, Password: `root`
 
-## 📊 Running the Pipeline
+## Running the Pipeline
 
 1. Open **Airflow UI** (`http://localhost:8080`)
 2. Enable & trigger the `etl_dag` DAG.
@@ -70,7 +70,7 @@ Ensure you have the following installed:
    SELECT * FROM transactions LIMIT 10;
    ```
 
-## 📈 Analytics Queries
+## Analytics Queries
 
 ### Total transactions per product category
 ```sql
@@ -87,7 +87,7 @@ SELECT customer_id, SUM(transaction_amount) AS total_spent FROM transactions GRO
 SELECT DATE_FORMAT(transaction_date, '%Y-%m') AS month, SUM(transaction_amount) AS total_spent FROM transactions WHERE transaction_date >= DATE_SUB(CURDATE(), INTERVAL 12 MONTH) GROUP BY month ORDER BY month;
 ```
 
-## 🙌 Acknowledgments
+## Acknowledgments
 - Based on [othneildrew's Best README Template](https://github.com/othneildrew/Best-README-Template).
 
 
